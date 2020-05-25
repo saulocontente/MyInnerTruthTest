@@ -10,7 +10,7 @@ public class SessionsPage extends BasePage{
         return dsl.waitPresenceOfElement(By.xpath("//app-empty-state//span[@class = 'h5']/span"),20).getText();
     }
     public void openEspecialistasMenu() {
-        dsl.waitVisibilityOfElement(By.xpath("//*[@routerlink = '/busca/']/span"),20).click();
+        dsl.waitClickableElement(By.xpath("//nav/ul/li/a[@href = '/busca']"),20).click();
     }
 
 }

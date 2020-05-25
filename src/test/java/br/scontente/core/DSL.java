@@ -17,12 +17,12 @@ public class DSL {
         return new WebDriverWait(getDriver(), timeout).until(ExpectedConditions.presenceOfElementLocated(by));
     }
 
-    public WebElement waitVisibilityOfElement(By by, int timeout) {
-        return new WebDriverWait(getDriver(), timeout).until(ExpectedConditions.visibilityOfElementLocated(by));
+    public WebElement waitClickableElement(By by, int timeout) {
+        return new WebDriverWait(getDriver(), timeout).until(ExpectedConditions.elementToBeClickable(by));
     }
 
     public void write(By by, String text) {
-        WebElement input = waitVisibilityOfElement(by, 15);
+        WebElement input = waitPresenceOfElement(by, 15);
         input.clear();
         input.sendKeys(text);
     }
@@ -32,7 +32,7 @@ public class DSL {
     }
 
     public String readValue(By by) {
-        return waitVisibilityOfElement(by, 10).getAttribute("value");
+        return waitPresenceOfElement(by, 10).getAttribute("value");
     }
     
     public String readValue(String id){

@@ -19,7 +19,7 @@ public class LoginPage extends BasePage {
     }
 
     public void enterLogin() {
-        dsl.waitVisibilityOfElement(By.xpath("//button/span[contains(., 'ENTRAR')]"),5).click();
+        dsl.waitClickableElement(By.xpath("//button/span[contains(., 'ENTRAR')]"),5).click();
     }
 
 }
