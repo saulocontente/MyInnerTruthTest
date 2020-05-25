@@ -13,6 +13,10 @@ public class DSL {
         getDriver().get(url);
     }
 
+    public WebElement waitPresenceOfElement(By by, int timeout) {
+        return new WebDriverWait(getDriver(), timeout).until(ExpectedConditions.presenceOfElementLocated(by));
+    }
+
     public WebElement waitVisibilityOfElement(By by, int timeout) {
         return new WebDriverWait(getDriver(), timeout).until(ExpectedConditions.visibilityOfElementLocated(by));
     }

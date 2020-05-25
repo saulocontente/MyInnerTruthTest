@@ -12,7 +12,7 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-    features = {"src\\test\\java\\br\\scontente\\features\\principal_flow.feature"},
+    features = {"src/test/java/br/scontente/features/principal_flow.feature"},
     glue = "br.scontente.features.step_definitions",
     tags = "@Flow",
     snippets = SnippetType.CAMELCASE,
@@ -20,14 +20,17 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
     strict = true
 )
 public class PrincipalRunnerTest {
+
     @BeforeClass
     public static void startDriver() {
         String path = OS.getDriverPathByOS();
         System.setProperty("webdriver.chrome.driver", path);
         DriverFactory.startDriver().manage().window().maximize();
     }
+
     @AfterClass
     public static void closeDriver() {
         DriverFactory.killDriver();
     }
+
 }

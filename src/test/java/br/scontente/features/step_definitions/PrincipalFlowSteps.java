@@ -31,7 +31,7 @@ public class PrincipalFlowSteps {
 
     @When("user clicks on “NOSSOS ESPECIALISTAS” to goes to Page busca")
     public void userClicksOnNOSSOSESPECIALISTASToGoesToPageBusca() {
-        sessions.openMenuEspecialista();
+        sessions.openEspecialistasMenu();
     }
 
     @When("user clicks on “Gostei quero saber mais” on the first professional that appear on the list to goes to that professional page")
