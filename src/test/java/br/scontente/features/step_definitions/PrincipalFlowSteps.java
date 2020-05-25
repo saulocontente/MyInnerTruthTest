@@ -31,6 +31,7 @@ public class PrincipalFlowSteps {
 
     @When("user clicks on “NOSSOS ESPECIALISTAS” to goes to Page busca")
     public void userClicksOnNOSSOSESPECIALISTASToGoesToPageBusca() {
+        sessions.waitReamazeWidget();
         sessions.openEspecialistasMenu();
     }
 

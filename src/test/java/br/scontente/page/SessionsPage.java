@@ -13,4 +13,8 @@ public class SessionsPage extends BasePage{
         dsl.waitClickableElement(By.xpath("//nav/ul/li/a[@href = '/busca']"),20).click();
     }
 
+    public void waitReamazeWidget() {
+        dsl.waitPresenceOfElement(By.id("reamaze-widget-icon"), 20);
+    }
+
 }

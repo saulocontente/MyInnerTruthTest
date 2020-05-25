@@ -7,7 +7,7 @@ import java.io.File;
 public enum OS {
 
     WINDOWS("Windows", "chromedriver/windows/chromedriver.exe"),
-    MACOSX("Mac", "chromedriver/mac/chromedriver"),
+    MACOSX("Mac", "chromedriver/macos/chromedriver"),
     LINUX("Linux", "chromedriver/linux/chromedriver");
 
     private String os;
