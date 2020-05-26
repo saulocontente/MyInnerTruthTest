@@ -12,9 +12,9 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-    features = {"src/test/java/br/scontente/features/principal_flow.feature"},
+    features = {"src/test/java/br/scontente/features/login.feature", "src/test/java/br/scontente/features/principal_flow.feature"},
     glue = "br.scontente.features.step_definitions",
-    tags = "@Flow",
+    tags = "(@login or @Flow)",
     snippets = SnippetType.CAMELCASE,
     plugin = {"pretty", "html:target/report-html"},
     strict = true

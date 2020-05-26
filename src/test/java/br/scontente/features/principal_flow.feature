@@ -9,12 +9,13 @@ Requirements
 
 Background: Access the Application
 Given a user goes into login with 'qachallenge@zenklub.com' and 'qachallenge'
+And clicks on Entrar button
 And after login should not have any session scheduled
 
 
 Scenario: Open Professional page
-When user clicks on “NOSSOS ESPECIALISTAS” to goes to Page busca
-And user clicks on “Gostei quero saber mais” on the first professional that appear on the list to goes to that professional page
-Then see more information about the professional choosed
+When user clicks on NOSSOS ESPECIALISTAS to goes to Page busca
+And user clicks on Gostei quero saber mais on the first professional that appear on the list to goes to that professional page
+Then see more information about the professional chosen
 
 

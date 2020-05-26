@@ -22,4 +22,8 @@ public class LoginPage extends BasePage {
         dsl.waitClickableElement(By.xpath("//button/span[contains(., 'ENTRAR')]"),5).click();
     }
 
+    public String validateError() {
+        return dsl.waitVisibilityOfElement(By.className("input-error"), 10).getText();
+    }
+
 }

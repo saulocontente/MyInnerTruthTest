@@ -21,6 +21,9 @@ public class DSL {
         return new WebDriverWait(getDriver(), timeout).until(ExpectedConditions.elementToBeClickable(by));
     }
 
+    public WebElement waitVisibilityOfElement(By by, int timeout){
+        return new WebDriverWait(getDriver(), timeout).until(ExpectedConditions.visibilityOfElementLocated(by));
+    }
 
     public void write(By by, String text) {
         WebElement input = waitPresenceOfElement(by, 15);
